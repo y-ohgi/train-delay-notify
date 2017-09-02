@@ -61,3 +61,4 @@ typings/
 
 
 deploy.env
+.lambda
