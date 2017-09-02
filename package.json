@@ -1,0 +1,15 @@
+{
+  "name": "train-delay-notify",
+  "version": "0.0.1",
+  "description": "Notice of train delay information to mastodon",
+  "main": "index.js",
+  "scripts": {
+    "setup": "./node_modules/.bin/node-lambda setup",
+    "deploy": "./node_modules/.bin/node-lambda deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-lambda": "^0.11.3"
+  }
+}
