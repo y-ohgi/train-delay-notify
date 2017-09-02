@@ -14,6 +14,7 @@ exports.handler = (event, context, callback) => {
         if( route.name.match(TARGET_ROUTES.join('|')) ) hitroutes.push(route.name)
       })
 
+
       console.log("toot message =====================")
       const msg = buildTootMsg(hitroutes)
       console.log(msg)
@@ -47,7 +48,7 @@ const fetchTrainDelayApi = () => new Promise(
  * @param {Array} hitroutes 遅延中の路線名が格納された配列
  * @return {String}
  */
-const buildTootMsg = hitroutes => `【遅延情報】\\n${hitroutes.join('\\n')}`
+const buildTootMsg = hitroutes => hitroutes.length ? `【遅延情報】\\n${hitroutes.join('\\n')}` : '【遅延情報】 \\n遅延している登録済みの路線はありません！'
 
 /***
  * トゥートする
